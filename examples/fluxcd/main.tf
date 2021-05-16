@@ -38,7 +38,7 @@ module "kubernetes" {
 }
 
 module "fluxcd" {
-  source              = "../../../sak-incubator/cicd/fluxcd"
+  source              = "github.com/BulbaWarrior/sak-incubator/cicd/fluxcd"
   depends_on          = [module.kubernetes]
   git_url             = var.fluxcd.git_url
   git_branch          = var.fluxcd.branch
